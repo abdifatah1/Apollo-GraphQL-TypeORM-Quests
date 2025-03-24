@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /** Options du compilateur TS => JS */
+    "target": "es2017", //Compilationv ers Ecmascript 2017
+    "module": "CommonJS", //Format de module utilisé (import ou require)
+    "lib": ["es6", "es2017"], // Pointage cvers les bibliothèque TS précise
+    "sourceMap": true, // Améloire la gestion du debugging entre TS et JS
+    "outDir": "./dist", //Dossier pour les dossiers compilés lors de la mise en production
+    /** Options de résolutions sur les modules */
+    "moduleResolution": "node", // Résoud les modules de manière identique à node
+    "resolveJsonModule": true, // Permet l'import des fichiers json
+    /** Optimisation et bonne pratique en compilation */
+    "removeComments": true, // SUppression des commentaires
+    "noImplicitAny": true, // Pas de type any
+    "strictNullChecks": true, // Restriction sur les null ou undefined
+    "strictFunctionTypes": true, // Vérification du typage de fonction
+    "noImplicitThis": true, // Pas de this dans un context non défini
+    "noUnusedLocals": true, // Pas de variable non utilisée
+    "noUnusedParameters": true, // Pas de params non utilisé
+    "noImplicitReturns": true, // Retour de valeur explicite dans les fonctions
+    /** Compatibilité inter systeme */
+    "allowSyntheticDefaultImports": true, // Permet d'importer les module s'ils n'ont pas de export default
+    "esModuleInterop": true, // Compatibilité CommonJS <=> Es Module
+    /** Décorateur et métadonnés (pour TypeORM) */
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules"], //Liste les fichiers et dossiers eclus de la compilation
+  "include": ["./src/**/*.ts"] // Liste les fichiers à inclure obligatoirement dans la compilation
+}

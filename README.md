@@ -6,3 +6,5 @@ Celui-ci est lié à une série de quêtes, qui te permettront pas à pas, à pr
 Commence par cloner le repo, puis suit les étapes, une à une....
 
 ## Etape 1
+
+npm install

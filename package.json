@@ -1,0 +1,22 @@
+{
+  "name": "apollo-graphql-typeorm-quests",
+  "version": "1.0.0",
+  "description": "Bienvenu dans ce repo pour la découverte des concepts clé d'Apollo serveur, GraphQL et TypeORM. Celui-ci est lié à une série de quêtes, qui te permettront pas à pas, à prendre tes marques...",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc",
+    "start": "ts-node-dev ./src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.13.12",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "graphql": "^16.10.0"
+  }
+}
