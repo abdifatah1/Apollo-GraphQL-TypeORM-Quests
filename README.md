@@ -8,3 +8,8 @@ Commence par cloner le repo, puis suit les étapes, une à une....
 ## Etape 1
 
 npm install
+
+
+![alt text](getCartoons.png)
+
+![alt text](getOneById.png)
