@@ -3,6 +3,7 @@ import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import {
   createCartoon,
+  deleteCartoon,
   getCartoons,
   getOneCartoonById,
 } from "./resolvers/cartoon.resolver";
@@ -19,6 +20,7 @@ const typeDefs = `#graphql
 
   type Mutation {
     createCartoon(cartoon: CartoonInput!): ID,
+    deleteCartoon(id: ID!) : String
   }
   # The "Query" type is special: it lists all of the available queries
   type Query {
@@ -34,6 +36,7 @@ const resolvers = {
   },
   Mutation: {
     createCartoon,
+    deleteCartoon,
   },
 };
 

@@ -36,3 +36,15 @@ export const createCartoon = (
   return id;
 };
 
+export const deleteCartoon = (
+  _: unknown,
+  args: GetOneCartoonByIdArgs
+): string => {
+  const cartoonToDelete = data.some((cartoon) => cartoon.id === +args.id);
+  if (cartoonToDelete) {
+    data = data.filter((d) => d.id !== +args.id);
+    return `cartoon ${args.id} is deleted`;
+  } else {
+    return `${args.id} not found`;
+  }
+};
