@@ -9,6 +9,7 @@ import {
 } from "./resolvers/cartoon.resolver";
 import { Personnage, PersonnageInput } from "./schemas/personnage.schema";
 import { Cartoon, CartoonInput } from "./schemas/cartoon.schema";
+import { dataSource } from "./db/client";
 
 const typeDefs = `#graphql
   # This "Cartoon" type defines the queryable fields for every cartoon in our data source.
@@ -46,6 +47,7 @@ const server = new ApolloServer({
 });
 /** Fonction auto appellée (évite la mise en constante) permettant de lancer le serveur */
 (async () => {
+  await dataSource.initialize();
   const { url } = await startStandaloneServer(server, {
     listen: { port: 4000 },
   });
