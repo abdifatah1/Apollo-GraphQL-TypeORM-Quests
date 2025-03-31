@@ -10,3 +10,4 @@ export const PersonnageInput = `{
   role: String
   short_description: String
 }`;
+
