@@ -52,16 +52,13 @@ export const deleteCartoon = async (
     relations: ["personnages", "genres"],
   });
 
-  // if (cartoonToDelete) {
-  //   await Promise.all([
-  //     Personnage.delete({ cartoon: { id: cartoonToDelete.id } }),
-  //     Genre.delete({ cartoon: { id: cartoonToDelete.id } }),
-  //   ]);
-  //   await cartoonToDelete.remove();
-  // }
-  console.log(cartoonToDelete);
   if (cartoonToDelete) {
-    // cartoonToDelete.remove();
+    await Promise.all([
+      Personnage.delete({ cartoon: { id: cartoonToDelete.id } }),
+      Genre.delete({ cartoon: { id: cartoonToDelete.id } }),
+    ]);
+    const result = await cartoonToDelete.remove();
+    console.log(result);
     return `cartoon ${args.id} is deleted`;
   } else {
     return `${args.id} not found`;

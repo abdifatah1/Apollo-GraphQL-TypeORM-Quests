@@ -10,12 +10,13 @@ import {
 import { Personnage, PersonnageInput } from "./schemas/personnage.schema";
 import { Cartoon, CartoonInput } from "./schemas/cartoon.schema";
 import { dataSource } from "./db/client";
-import { GenreInput } from "./schemas/genre.schema";
+import { GenreInput, Genre } from "./schemas/genre.schema";
 
 const typeDefs = `#graphql
   # This "Cartoon" type defines the queryable fields for every cartoon in our data source.
   type Cartoon ${Cartoon}
   type Personnage ${Personnage}
+  type Genre ${Genre}
 
   input CartoonInput ${CartoonInput}
   input PersonnageInput ${PersonnageInput}

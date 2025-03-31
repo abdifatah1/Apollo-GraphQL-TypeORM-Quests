@@ -4,7 +4,7 @@ export const Cartoon = `{
     description: String
     nb_of_episodes: Int
     nb_of_seasons: Int
-    genres: [String]
+    genres: [Genre]
     realisator: String
     author: String
     ft_diffusion: String
